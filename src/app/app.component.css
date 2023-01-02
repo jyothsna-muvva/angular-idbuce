@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.col-style {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+}

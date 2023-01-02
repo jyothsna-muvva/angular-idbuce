@@ -1,0 +1,35 @@
+<hello name="{{ name }}"></hello>
+<div class="container">
+  <!-- <div>
+    <button (click)="onClick()">{{ array[0] }}</button>
+    <button>{{ clickButton }}</button>
+  </div>
+  <br />
+  <button>{{ array[1] }}</button><br />
+  <button>{{ array[2] }}</button><br />
+  <button>{{ array[3] }}</button> -->
+  <div class="col-style">
+    New
+    <ng-container *ngFor="let task of taskList">
+      <div *ngIf="task.status === 'new'" (click)="updateStatus(task)">
+        {{ task.taskName }}
+      </div>
+    </ng-container>
+  </div>
+  <div class="col-style">
+    Ongoing
+    <ng-container *ngFor="let task of taskList">
+      <div *ngIf="task.status === 'ongoing'" (click)="updateStatus(task)">
+        {{ task.taskName }}
+      </div>
+    </ng-container>
+  </div>
+  <div class="col-style">
+    Done
+    <ng-container *ngFor="let task of taskList">
+      <div *ngIf="task.status === 'done'">
+        {{ task.taskName }}
+      </div>
+    </ng-container>
+  </div>
+</div>
